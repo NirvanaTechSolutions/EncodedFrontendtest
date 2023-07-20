@@ -21,7 +21,7 @@ loading:any
   }
   fetchReviews() {  
     this.loading = true
-    this.http.get<any[]>('http://localhost:1220/auth/allreviews').subscribe(
+    this.http.get<any[]>('https://encodedbackend.vercel.app/auth/allreviews').subscribe(
       (response:any) => {
         this.reviews = response;
         console.log(this.reviews)
