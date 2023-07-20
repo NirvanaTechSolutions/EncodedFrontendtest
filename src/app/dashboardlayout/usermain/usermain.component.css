@@ -1,0 +1,48 @@
+.status-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: rgb(128, 0, 0);
+    color: white;
+    font-weight: bold;
+    border-radius: 2px;
+  }
+
+
+  .card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 70px;
+    margin-bottom: 20px;
+    margin-top: 70px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .card-description {
+    margin-bottom: 10px;
+  }
+  
+  .card a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: blue;
+  }
+  
+  /* Media Query for Mobile */
+  @media (max-width: 767px) {
+    .card {
+      padding: 10px;
+      margin-left: 0;
+    }
+    
+    .card-title {
+      font-size: 16px;
+    }
+  }

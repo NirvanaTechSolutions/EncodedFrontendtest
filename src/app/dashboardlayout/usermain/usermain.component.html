@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  
+<div *ngIf="loading">
+  <app-loading></app-loading>
+ </div>
+   
+   
+
+    
+
+    <div *ngIf="substatus==true;">
+      <app-usernav></app-usernav>
+       <app-userdata></app-userdata>  
+    </div>
+
+    <div *ngIf="substatus==false;">
+      <app-usernav></app-usernav>
+      <div class="card">
+        
+        <h3 class="card-title">Start Your Journey With Subscription <a routerLink="/pricing">Subscribe Now</a></h3>
+       
+      </div>
+    </div>
+    
+    
+    <router-outlet></router-outlet>
+</body>
+</html>

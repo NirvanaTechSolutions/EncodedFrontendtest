@@ -1,0 +1,24 @@
+<div class="header-content" [ngClass]="{'black-background': shouldChangeBackground, 'white-transition': !shouldChangeBackground}">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6" data-aos="fade-right">
+        <p id="subtitle" class="subtitle">Want To Get <span style="color: blue;" >Good </span>{{subtitle}} </p>
+        <h1 class="title">
+          Get Your Own <span class="gradient-text">Personal Tutor</span> Now!
+        </h1>
+        <p class="paragraph">
+          Whether you're a beginner or an experienced coder looking to level up, our dedicated tutors are here to guide you every step of the way. Unlock your full potential as you dive deep into the world of programming languages, algorithms, and software development.
+        </p>
+        <div class="button-wrapper" data-aos="fade-right">
+          <button class="custom-btn btn-3" (click)="signup()"><span>Register</span></button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img class="bg-img" src="./assets/images/img1.png" alt="Background Image">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,363 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+#testimonials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+}
+.testimonial-heading{
+    letter-spacing: 1px;
+    margin: 30px 0px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.testimonial-heading span{
+    font-size: 1.3rem;
+    color: #252525;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.testimonial-box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width:100%;
+}
+.testimonial-box{
+    width:500px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+}
+.profile-img{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.profile-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+.name-user{
+    display: flex;
+    flex-direction: column;
+}
+.name-user strong{
+    color: #3d3d3d;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+.name-user span{
+    color: #979797;
+    font-size: 0.8rem;
+}
+.reviews{
+    color: #f9d71c;
+}
+.box-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.client-comment p{
+    font-size: 0.9rem;
+    color: #4b4b4b;
+}
+.testimonial-box:hover{
+    transform: translateY(-10px);
+    transition: all ease 0.3s;
+}
+ 
+@media(max-width:1060px){
+    .testimonial-box{
+        width:45%;
+        padding: 10px;
+    }
+}
+@media(max-width:790px){
+    .testimonial-box{
+        width:100%;
+    }
+    .testimonial-heading h1{
+        font-size: 1.4rem;
+    }
+}
+@media(max-width:340px){
+    .box-top{
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .reviews{
+        margin-top: 10px;
+    }
+}
+::selection{
+    color: #ffffff;
+    background-color: #252525;
+}
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+
+*{
+    outline:none;
+  }
+  /* spacer */
+  .spacer{
+    height:150px;
+    width:100%;
+  }
+  .spacer2{
+    height:20px;
+    width:100%;
+  }
+  /* spacer ends */
+  
+  /* slider styles */
+  .sd_master_wrapper{
+      position: relative;	
+      max-width:900px;
+      margin:0 auto;
+      padding:0;
+      border-radius:10px;
+      z-index:9999;
+  }
+  .sdtestBg3{
+      height: 100%;
+      width: 80%;
+      background: #fff;
+      position: absolute;
+      bottom: -40px;
+      left: 10%;
+      border-radius: 20px;
+      box-shadow: 0px 18px 52.8537px rgb(215 228 249 / 50%);
+      z-index:1;
+  }
+  .sdtestBg2{
+      height: 100%;
+      width: 90%;
+      background: #fff;
+      position: absolute;
+      bottom: -22px;
+      left: 5%;
+      border-radius: 20px;
+      box-shadow: 0px 18px 52.8537px rgb(215 228 249 / 50%);
+      z-index:2;
+  }
+  
+  .sd_scroll {
+      height: auto;
+      max-height: 180px;
+      overflow: auto;
+  }
+      
+  .slideshow {
+      position: relative;
+      min-height: 300px;
+      height: auto;
+      background: #fff;
+      box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
+      border-radius: 20px;
+      background-image: url(https://farsighttechnologies.com/wp-content/uploads/2021/03/quote1.png), url(https://farsighttechnologies.com/wp-content/uploads/2021/03/quote.png);
+      background-position: top 15px left 15px, bottom 40% right 15px;
+      background-repeat: no-repeat;
+      background-size: 180px, 180px;
+      z-index:3;
+  }
+  button.slick-prev.slick-arrow {
+      position: absolute;
+      z-index: 9999;
+      bottom: -80px;
+      right: 160px;
+      background: transparent;
+      color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      height: 15px;
+      width: 30px;
+      padding: 0;
+      background-image: url(https://farsighttechnologies.com/wp-content/uploads/2021/03/left-icon.png);
+      background-size: 100% 100%;
+  }
+  button.slick-next.slick-arrow {
+      position: absolute;
+      bottom: -82px;
+      right: 105px;
+      background: transparent;
+      color: transparent;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      outline: none;
+      height: 18px;
+      width: 40px;
+      background-image: url(https://farsighttechnologies.com/wp-content/uploads/2021/03/right-icon.png);
+      background-size: 100% 100%;
+  }
+  .pagingInfo {
+      position: absolute;
+      bottom: 0;
+      z-index: 999;
+  }
+  .sdCustomSliderHeadig {
+      color: #94A2B3;
+      font-family: "Poppins", Sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.6em;
+      text-align: center;
+  }
+  .sdCustomSliderBtn{
+      display: inline-block;
+      text-decoration: none;
+      font-family: montserrat;
+      background: #E31C3A;
+      color: #fff;
+      padding: 12px 25px;
+      margin-top: 30px;
+      border-radius: 4px;
+      outline: none;
+      font-size: 14px;
+      font-weight: 500;
+  }
+  .sdAllContent{
+      width:75%;
+      margin:auto;
+  }
+  .thumbnail img {
+      height: 55px;
+      width: 55px;
+      border-radius: 50%;
+      margin: auto;
+      margin-top: 15px;
+  }
+  .content{
+      display:block !important;
+      padding: 5px;
+  }
+  .SdClientName {
+      text-align: center;
+      color: #272D4E;
+      font-family: "Poppins", Sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.4em;
+      margin-top: 15px;
+  }
+  .SdClientDesc {
+      text-align: center;
+      color: #7854F7;
+      font-family: "Poppins", Sans-serif;
+      font-size: 14px;
+      line-height: 1.4em;
+      margin-bottom: 10px;
+  }
+  
+  
+  /* style for moblile */
+  @media (max-width:576px){
+  .sd_scroll {
+      height: auto;
+      overflow: auto;
+      max-height:240px;
+  }
+  
+  .thumbnail, .btnNtxt{
+      width: 100% !important;
+      display: block !important;
+  }
+  
+  }
+  /* scroll bar */
+  /* total width */
+  .sd_scroll::-webkit-scrollbar {
+      background-color:transparent;
+      width:6px;
+  }
+  
+  /* background of the scrollbar except button or resizer */
+  .sd_scroll::-webkit-scrollbar-track {
+      background-color:transparent;
+  }
+  .sd_scroll::-webkit-scrollbar-track:hover {
+      background-color:transparent;
+  }
+  
+  /* scrollbar itself */
+  .sd_scroll::-webkit-scrollbar-thumb {
+      background-color:#babac0;
+      border-radius:16px;
+      
+  }
+  .sd_scroll::-webkit-scrollbar-thumb:hover {
+      background-color:#a0a0a5;
+  }

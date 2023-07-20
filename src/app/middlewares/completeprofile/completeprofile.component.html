@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Country Code Selection</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content=""><link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css'>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section class="pt-5 pb-5">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-12">
+                <h4><a href="https://intl-tel-input.com/" target="_blank">Start With Completing Your Profile...</a></h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 mt-5 mb-5">
+                <div class="form-area">
+                    <div class="form-inner">
+                        <form (submit)="onSubmit()" method="post" ngNativeValidate>
+                          <div class="form-group">
+                            <input id="message" class="form-control" name="message" [(ngModel)]="formData.message" required placeholder="Address">
+                        </div>
+                        
+                            
+
+                            <div class="form-group">
+                              
+                              <select  class="form-control" id="country" name="country" [(ngModel)]="formData.country" (change)="onCountryChange()"  required>
+                                <option value="" disabled selected>Select a Country</option>
+                                <option *ngFor="let country of countries" [value]="country" required>{{ country }}</option>
+                              </select>
+                            </div>
+                          
+                            <div class="form-group">
+                             
+                              <select class="form-control" id="state" name="state" [(ngModel)]="formData.state" required>
+                                <option value="" disabled selected>Select a State</option>
+                                <option *ngFor="let state of states" [value]="state" required>{{ state }}</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              
+                              
+                              <input #phoneNumberInput  placeholder="Mobile Number" type="tel" class="form-control" style="width:100%;" id="phone" name="phone" [(ngModel)]="formData.mobileno"  required >
+                          </div>
+                            <div class="form-group">
+                              
+                              <input placeholder="Zipcode/Pincode" class="form-control" type="number" id="name" name="name" [(ngModel)]="formData.pincode" required>
+                            </div>
+                           
+                            <button type="submit" class="btn btn-primary form-submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</section>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+
+
+</body>
+</html>

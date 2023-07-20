@@ -1,0 +1,73 @@
+
+.black-background {
+  background-color: black;
+  transition: background-color 0.5s ease;
+}
+
+.white-transition {
+  background-color: white;
+  transition: background-color 0.5s ease;
+}
+
+
+:root {
+    font-size: 20px;
+    font-family: "Helvetica Neue", Helvetica;
+  }
+  
+  body {
+    background: black;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 50vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1700px;
+  }
+
+ 
+  
+  div {
+    margin: 30vh 0;
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: -1.2px;
+    color: #fff;
+    line-height: 1.22em;
+    width: 800px;
+    padding: 50px;
+    padding-top: 200px;
+  }
+  
+  span {
+    --opacity: 0.3;
+    
+    opacity: var(--opacity);
+    
+  }
+  
+  .pro {
+    display: block;
+    margin-top: 2.0rem;
+  }
+
+  
+  @media (max-width: 500px) {
+    div {
+      margin: 5vh 0;
+      font-size: 3rem;
+      font-weight: 500;
+      letter-spacing: -1.2px;
+      color: #fff;
+      line-height: 1.22em;
+      width: 800px;
+      padding: 50px;
+    }
+
+  }
+
+  
+  

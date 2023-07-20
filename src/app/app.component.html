@@ -1,0 +1,10 @@
+
+<div *ngIf="loading == true ;else show" >
+    <app-homeloading></app-homeloading>
+   </div>
+   <ng-template #show>
+    <router-outlet></router-outlet>
+   </ng-template>
+   
+ 
+  

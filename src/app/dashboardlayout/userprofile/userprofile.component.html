@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <app-usernav></app-usernav>
+  <div *ngIf="loading">
+   <app-loading></app-loading>
+  </div>
+
+
+  <div class="profile" *ngIf="userProfile">
+    <h1>{{userProfile.name}}</h1>
+    <div class="profile-info">
+      <div class="info-row">
+        <span>Email:</span>
+        <p>{{userProfile.email}}</p>
+      </div>
+      <div class="info-row">
+        <span>Mobile:</span>
+        <p>{{userProfile.mobileno}}</p>
+      </div>
+      <div class="info-row">
+        <span>Address:</span>
+        <p>{{userProfile.message}}</p>
+      </div>
+      <div class="info-row">
+        <span>Country:</span>
+        <p>{{userProfile.country}}</p>
+      </div>
+      <div class="info-row">
+        <span>State:</span>
+        <p>{{userProfile.state}}</p>
+      </div>
+      <div class="info-row">
+        <span>Pincode:</span>
+        <p>{{userProfile.pincode}}</p>
+      </div>
+      <div class="info-row">
+        <span>Subscription Status:</span>
+        <p class="status active" *ngIf="userProfile.issubscribed==true">Subscribed</p>
+        <p class="status inactive" *ngIf="userProfile.issubscribed==false">Not Subscribed</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!-- news -->
+<div class="profile">
+    <h3>Latest News</h3>
+
+
+   <div *ngIf="loading == true; else cards ">
+    <app-cardloading></app-cardloading>
+   </div>
+   <ng-template #cards>
+    <div class="profile" >
+        <h5 class="card-title">>  {{ news }}</h5>
+        
+        
+      </div>
+   </ng-template>
+   
+
+  </div>
+
+
+<!-- schedule -->
+  <div class="profile">
+    <h3>{{msg}}</h3>    
+    <div *ngIf="loading == true; else scheduling ">
+        <app-cardloading></app-cardloading>
+       </div>
+       <ng-template #scheduling>
+        <div class="profile" *ngIf="schedule" >
+            <div class="info-row">
+                <span>Topic:-</span>
+                <p>{{schedule.topic}}</p>
+              </div>
+              <div class="info-row">
+                <span>Date:-</span>
+                <p>{{date}}</p>
+              </div>
+              <div class="info-row">
+                <span>Time:-</span>
+                <p>{{schedule.timing}}</p>
+              </div>
+              <div class="info-row">
+                <span>Link:-</span>
+                <p><a [href]="schedule.joinLink " target="_blank">Join </a></p>
+              </div>
+     
+            
+          </div>
+       </ng-template>
+
+    
+  </div>
+
+<!-- group -->
+
+  <div class="profile">
+    <h3>Join Our Whatsapp Group</h3><br>
+  
+    <a style="align-items: center;"  [href]="link" target="_blank" class="whatsapp-button"><i class="fab fa-whatsapp">JOIN WHATSAPPP</i></a>
+  </div>
+
+<!-- Membership -->
+
+<div class="profile">
+    <h3>MemBership Details</h3>    
+    <div *ngIf="loading == true; else membership ">
+        <app-cardloading></app-cardloading>
+       </div>
+       <ng-template #membership>
+        <div class="profile" *ngIf="member"> 
+
+            <div class="info-row">
+                <span>Plan:-</span>
+                <p>{{member.plan}}</p>
+              </div>
+              <div class="info-row">
+                <span>BatchId:-</span>
+                <p>{{batch}}</p>
+              </div>
+              <div class="info-row">
+                <span>Activation:-</span>
+                <p>{{activation}}</p>
+              </div>
+              <div class="info-row">
+                <span>Expiration:-</span>
+                <p>{{expiration}}</p>
+              </div>
+      
+     
+      
+         
+            
+            
+          </div>
+       </ng-template>
+
+    
+  </div>

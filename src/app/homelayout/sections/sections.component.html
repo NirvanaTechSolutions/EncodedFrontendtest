@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body [ngClass]="{'black-background': shouldChangeBackground, 'white-transition': !shouldChangeBackground}" class="heading-component">
+
+
+    <div tg-name="_" tg-ref="container" tg-from="1" tg-to="8" tg-step="1" tg-bezier="easeInOut" >
+      
+        <section tg-name="_" tg-map="1,2,3,4,5,6,7,8,9,10: 1">
+          <span tg-name="opacity" tg-filter="2!" tg-follow="container"    >Are you facing difficulties in coding?</span><br><br>
+          <span tg-name="opacity" tg-filter="3!" tg-follow="container">Is your academics too difficult?</span><br><br>
+          <span tg-name="opacity" tg-filter="4!" tg-follow="container">Having to do complex projects?</span><br><br>
+          <span tg-name="opacity" tg-filter="5!" tg-follow="container">Have to grasp difficult technologies?</span><br><br>
+          <span tg-name="opacity" tg-filter="6,7" tg-map="6: 0.3; 7: 1" tg-follow="container">Too many programming concepts?</span>
+
+          
+        </section>
+      </div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Customer Review</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+</head>
+<body>
+    <app-navbar></app-navbar>
+
+    
+    <div *ngIf="loading == true; else show ">
+      <app-homeloading></app-homeloading>
+     </div>
+     <ng-template #show>
+     
+  <section id="testimonials">
+    <!--heading--->
+    <div class="testimonial-heading">
+        
+      <h4 style="margin-top: 20px;"> Our Reviews
+        
+      </h4>
+    </div>
+    <!--testimonials-box-container------>
+    <div class="testimonial-box-container">
+
+       
+      <!--BOX-1-------------->
+      <div class="testimonial-box" *ngFor="let item of reviews">
+        
+
+        <!--top------------------------->
+
+        <div class="box-top">
+          <!--profile----->
+          <div class="profile">
+            <!--img---->
+            <div class="profile-img">
+              <img src="https://cdn4.iconfinder.com/data/icons/office-thick-outline/36/office-14-256.png" />
+            </div>
+            <!--name-and-username-->
+            <div class="name-user">
+              <strong>{{item.name}}</strong>
+            </div>
+          </div>
+          <!--reviews------>
+          <div class="reviews">
+            <i class="fas fa-star" *ngFor="let star of getStarsArray(item.rating)"></i>
+          </div>
+        </div>
+        <!--Comments---------------------------------------->
+        <div class="client-comment">
+          <p>{{item.feedback}}</p>
+        </div>
+      </div>
+      
+      <!-- Add more testimonial-box elements for more reviews -->
+    </div>
+  </section>
+</ng-template>
+  
+
+
+
+</body>
+</html>

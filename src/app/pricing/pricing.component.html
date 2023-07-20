@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700">
+  <title>Document</title>
+</head>
+<body>
+  
+
+<div *ngIf="loading">
+  <app-homeloading></app-homeloading>
+ </div>
+ 
+
+
+
+
+  <div *ngIf="authentication == 'true';else demopage">
+    <app-usernav></app-usernav>
+
+   <div *ngIf="country_code == 'IN' ;else International" >
+    
+    <section class="pricing-tables content-area">
+      <div class="container">
+          <!-- Main title -->
+          <div class="contain">
+            <div class="typewriter">Start Your Journey</div>
+          </div>
+          <div class="row">
+              <div class="col-sm-12 col-lg-4 col-md-4">
+                  <div class="pricing">
+                      <div class="price-header">
+                          <div class="title">Basic Plan</div>
+                          <div class="price">₹80</div>
+                      </div>
+                      <div class="content">
+                          <ul>
+                              <li>20 Projects</li>
+                              <li>32GB Storage</li>
+                              <li>50 Email Accounts</li>
+                              <li>12GB Bandwidth</li>
+                              <li>32GB Storage</li>
+                          </ul>
+                          <div class="button"><a (click)="makePayment(80,'Basic')" class="btn btn-outline pricing-btn">Purchase</a></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-12 col-lg-4 col-md-4">
+                  <div class="pricing featured">
+                      <div class="listing-badges">
+                          <span class="featured">Featured</span>
+                      </div>
+                      <div class="price-header price-header-2">
+                          <div class="title">Pro Plan</div>
+                          <div class="price">₹160</div>
+                      </div>
+                      <div class="content">
+                          <ul>
+                              <li>20 Projects</li>
+                              <li>32GB Storage</li>
+                              <li>50 Email Accounts</li>
+                              <li>12GB Bandwidth</li>
+                              <li>32GB Storage</li>
+                          </ul>
+                          <div class="button"><a (click)="makePayment(160,'Pro')" class="btn btn-outline pricing-btn button-theme">Purchase</a></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-12 col-lg-4 col-md-4">
+                  <div class="pricing">
+                      <div class="price-header">
+                          <div class="title">Project Assistance Plan</div>
+                          <div class="price">₹240</div>
+                      </div>
+                      <div class="content">
+                          <ul>
+                              <li>20 Projects</li>
+                              <li>32GB Storage</li>
+                              <li>50 Email Accounts</li>
+                              <li>12GB Bandwidth</li>
+                              <li>32GB Storage</li>
+                          </ul>
+                          <div class="button"><a (click)="makePayment(240,'Project')" class="btn btn-outline pricing-btn">Purchase</a></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  </div>
+  
+  <ng-template #International>
+    <section class="pricing-tables content-area">
+      <div class="container">
+          <!-- Main title -->
+          <div class="contain">
+            <div class="typewriter">Start Your Journey</div>
+          </div>
+          <div class="row">
+              <div class="col-sm-12 col-lg-4 col-md-4">
+                  <div class="pricing">
+                      <div class="price-header">
+                          <div class="title">Basic Plan</div>
+                          <div class="price">$1</div>
+                      </div>
+                      <div class="content">
+                          <ul>
+                              <li>20 Projects</li>
+                              <li>32GB Storage</li>
+                              <li>50 Email Accounts</li>
+                              <li>12GB Bandwidth</li>
+                              <li>32GB Storage</li>
+                          </ul>
+                          <div class="button"><a (click)="makePaymentUSD(1,'Basic')" class="btn btn-outline pricing-btn">Purchase</a></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-12 col-lg-4 col-md-4">
+                  <div class="pricing featured">
+                      <div class="listing-badges">
+                          <span class="featured">Featured</span>
+                      </div>
+                      <div class="price-header price-header-2">
+                          <div class="title">Pro Plan</div>
+                          <div class="price">$2</div>
+                      </div>
+                      <div class="content">
+                          <ul>
+                              <li>20 Projects</li>
+                              <li>32GB Storage</li>
+                              <li>50 Email Accounts</li>
+                              <li>12GB Bandwidth</li>
+                              <li>32GB Storage</li>
+                          </ul>
+                          <div class="button"><a (click)="makePaymentUSD(2,'Pro')" class="btn btn-outline pricing-btn button-theme">Purchase</a></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-12 col-lg-4 col-md-4">
+                  <div class="pricing">
+                      <div class="price-header">
+                          <div class="title">Project Assistance Plan</div>
+                          <div class="price">$3</div>
+                      </div>
+                      <div class="content">
+                          <ul>
+                              <li>20 Projects</li>
+                              <li>32GB Storage</li>
+                              <li>50 Email Accounts</li>
+                              <li>12GB Bandwidth</li>
+                              <li>32GB Storage</li>
+                          </ul>
+                          <div class="button"><a (click)="makePaymentUSD(3,'Project')" class="btn btn-outline pricing-btn">Purchase</a></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  </ng-template>
+  </div>
+
+
+
+<ng-template #demopage>
+  <app-navbar></app-navbar>
+
+  <div *ngIf="country_code == 'IN' ;else International" >
+    <section class="pricing-tables content-area">
+      <div class="container">
+          <!-- Main title -->
+          <div class="contain">
+            <div class="typewriter">Start Your Journey</div>
+          </div>
+          <div class="row">
+              <div class="col-sm-12 col-lg-4 col-md-4">
+                  <div class="pricing">
+                      <div class="price-header">
+                          <div class="title">Basic Plan</div>
+                          <div class="price">₹80</div>
+                      </div>
+                      <div class="content">
+                          <ul>
+                              <li>20 Projects</li>
+                              <li>32GB Storage</li>
+                              <li>50 Email Accounts</li>
+                              <li>12GB Bandwidth</li>
+                              <li>32GB Storage</li>
+                          </ul>
+                          <div class="button"><a (click)="signup()" class="btn btn-outline pricing-btn">Sign Up</a></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-12 col-lg-4 col-md-4">
+                  <div class="pricing featured">
+                      <div class="listing-badges">
+                          <span class="featured">Featured</span>
+                      </div>
+                      <div class="price-header price-header-2">
+                          <div class="title">Pro Plan</div>
+                          <div class="price">₹160</div>
+                      </div>
+                      <div class="content">
+                          <ul>
+                              <li>20 Projects</li>
+                              <li>32GB Storage</li>
+                              <li>50 Email Accounts</li>
+                              <li>12GB Bandwidth</li>
+                              <li>32GB Storage</li>
+                          </ul>
+                          <div class="button"><a (click)="signup()" class="btn btn-outline pricing-btn button-theme">Sign Up</a></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-12 col-lg-4 col-md-4">
+                  <div class="pricing">
+                      <div class="price-header">
+                          <div class="title">Project Assistance Plan</div>
+                          <div class="price">₹240</div>
+                      </div>
+                      <div class="content">
+                          <ul>
+                              <li>20 Projects</li>
+                              <li>32GB Storage</li>
+                              <li>50 Email Accounts</li>
+                              <li>12GB Bandwidth</li>
+                              <li>32GB Storage</li>
+                          </ul>
+                          <div class="button"><a (click)="signup()" class="btn btn-outline pricing-btn">Sign Up</a></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  </div>
+  
+  <ng-template #International>
+    <section class="pricing-tables content-area">
+      <div class="container">
+          <!-- Main title -->
+          <div class="contain">
+            <div class="typewriter">Start Your Journey</div>
+          </div>
+          <div class="row">
+              <div class="col-sm-12 col-lg-4 col-md-4">
+                  <div class="pricing">
+                      <div class="price-header">
+                          <div class="title">Basic Plan</div>
+                          <div class="price">$1</div>
+                      </div>
+                      <div class="content">
+                          <ul>
+                              <li>20 Projects</li>
+                              <li>32GB Storage</li>
+                              <li>50 Email Accounts</li>
+                              <li>12GB Bandwidth</li>
+                              <li>32GB Storage</li>
+                          </ul>
+                          <div class="button"><a (click)="signup()" class="btn btn-outline pricing-btn">Sign Up</a></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-12 col-lg-4 col-md-4">
+                  <div class="pricing featured">
+                      <div class="listing-badges">
+                          <span class="featured">Featured</span>
+                      </div>
+                      <div class="price-header price-header-2">
+                          <div class="title">Pro Plan</div>
+                          <div class="price">$2</div>
+                      </div>
+                      <div class="content">
+                          <ul>
+                              <li>20 Projects</li>
+                              <li>32GB Storage</li>
+                              <li>50 Email Accounts</li>
+                              <li>12GB Bandwidth</li>
+                              <li>32GB Storage</li>
+                          </ul>
+                          <div class="button"><a (click)="signup()" class="btn btn-outline pricing-btn button-theme">Sign Up</a></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-12 col-lg-4 col-md-4">
+                  <div class="pricing">
+                      <div class="price-header">
+                          <div class="title">Project Assistance Plan</div>
+                          <div class="price">$3</div>
+                      </div>
+                      <div class="content">
+                          <ul>
+                              <li>20 Projects</li>
+                              <li>32GB Storage</li>
+                              <li>50 Email Accounts</li>
+                              <li>12GB Bandwidth</li>
+                              <li>32GB Storage</li>
+                          </ul>
+                          <div class="button"><a (click)="signup()" class="btn btn-outline pricing-btn">Sign Up</a></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  </ng-template>
+
+</ng-template>
+
+
+</body>
+</html>

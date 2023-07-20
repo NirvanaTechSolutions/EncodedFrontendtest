@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <div *ngIf="loading | async" >
+      <app-homeloading></app-homeloading>
+     </div>
+    
+    <app-navbar></app-navbar>
+
+    <main>
+
+
+      <app-lacking></app-lacking>
+
+      <div class="space">
+        
+        <div class="particle"></div>
+
+      </div>
+            
+
+      <app-sections></app-sections>
+      <app-video></app-video>
+
+      <app-cards></app-cards>
+
+      <app-joinus></app-joinus>
+      <app-writereview></app-writereview>
+
+      <app-footer></app-footer>
+    </main>
+    <router-outlet></router-outlet>
+  </body>
+</html>

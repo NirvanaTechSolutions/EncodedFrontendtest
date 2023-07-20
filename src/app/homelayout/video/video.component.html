@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="row">
+        
+        <div class="col-md-8">
+            <div class="video-container">
+                <div id="video">
+                    <video id="myVideo" contols >
+                      <source src="./assets/video/sample.mp4" type="video/mp4">
+                    </video>
+                    <div class="seek-bar">
+                        <div class="progress"></div>
+                      </div>
+                      <button id="play-button" class="play-button"></button>
+                  </div>
+              </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Begin WIth Us</h5>
+    <p class="card-text">Write your description here.</p>
+  </div>
+</div>
+    </div>
+      </div>
+      
+      <style>
+      
+        .video-container {
+          position: relative;
+          padding-bottom: 56.25%; /* 16:9 aspect ratio (change as needed) */
+          height: 0;
+          overflow: hidden;
+        }
+      
+        .video-container video::-webkit-media-controls-enclosure {
+          display: none !important;
+        }
+      
+        .video-container video::-webkit-media-controls-panel {
+          display: none !important;
+        }
+      
+        .video-container video::-webkit-media-controls-play-button {
+          display: none !important;
+        }
+      
+        .video-container video::-webkit-media-controls-start-playback-button {
+          display: none !important;
+        }
+      
+        .video-container video::-webkit-media-controls-timeline {
+          display: flex !important;
+        }
+      
+        .video-container video::-webkit-media-controls-volume-slider {
+          display: flex !important;
+        }
+      
+        .video-container video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      </style>
+      
+      
+</body>
+</html>

@@ -1,0 +1,154 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Profile Dashboard</title>
+
+    <style>
+      .dashboard {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .profile {
+    text-align: center;
+  }
+
+  .profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  .stats {
+    display: flex;
+  }
+
+  .stat {
+    text-align: center;
+    margin-right: 20px;
+  }
+
+  .stat h3 {
+    margin: 0;
+  }
+
+  .stat p {
+    margin: 5px 0;
+  }
+
+    </style>
+  </head>
+  <body>
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Font Awesome library -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <style>
+        /* Add your custom CSS styles here */
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <nav class="sidebar">
+          <nav class="main-menu">
+            <ul>
+              <li>
+                <a routerLink="/">
+                  <i class="fa fa-home fa-2x"></i>
+                  <span class="nav-text">
+                    Dashboard
+                  </span>
+                </a>
+        
+              </li>
+              </ul>
+
+              <ul *ngIf="this.pricing == true">
+                <li>
+                  <a routerLink="/pricing">
+                    <i class="fa fa-dollar-sign fa-2x"></i>
+                    <span class="nav-text">
+                      Pricing
+                    </span>
+                  </a>
+          
+                </li>
+                </ul>
+
+                <ul>
+                  <li>
+                    <a routerLink="/profile" >
+                      <i class="fa fa-user fa-2x"></i>
+                      <span class="nav-text">
+                        Profile
+                      </span>
+                    </a>
+            
+                  </li>
+                  </ul>
+
+                  <ul>
+                    <li>
+                      <a routerLink="/alltransactions">
+                        <i class="fa fa-store-alt fa-2x"></i>
+                        <span class="nav-text">
+                          Transaction History
+                        </span>
+                      </a>
+              
+                    </li>
+                    </ul>
+
+                    
+                    
+                  <ul class="bottom-menu">
+                    <li>
+                      <a (click)="logoutuser()">
+                        <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">Logout</span>
+                      </a>
+                    </li>
+                  </ul>
+
+          </nav>
+        </nav>
+
+
+
+        <nav class="bottom-bar fixed-bottom">
+          <a  class="active" routerLink="/"><i class="fas fa-home"></i></a>
+          <a  *ngIf="this.pricing == true" routerLink="/pricing"><i class="fas fa-dollar-sign"></i></a>
+          <a routerLink="/profile"><i class="fas fa-user"></i></a>
+          <a routerLink="/alltransactions"><i class="fas fa-store-alt"></i></a>
+          <a (click)="logoutuser()"><i class="fas fa-power-off"></i></a>
+        
+        
+
+        </nav>
+      </div>
+    </body>
+    </html>
+    
+
+
+    
+  <router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+    
+  </body>
+  </html>

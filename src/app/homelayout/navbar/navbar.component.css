@@ -1,0 +1,14 @@
+
+.navbar {
+  background: linear-gradient(to left, #0134ffef, #2b57a3);
+ 
+}
+
+
+
+
+
+a:hover {
+  color: #ff0000; /* Text color on hover */
+  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000; /* Glowing effect */
+}
