@@ -68,7 +68,7 @@ export class WritereviewComponent {
 
 
   fetchReviews() {  
-    this.http.get<any[]>('https://encodedbackend.vercel.app/auth/latestreviews').subscribe(
+    this.http.get<any[]>('https://encodedbackend.vercel.app/api/auth/latestreviews').subscribe(
       (response:any) => {
         this.reviews = response;
         console.log(this.reviews)
@@ -100,7 +100,7 @@ export class WritereviewComponent {
       rating:rating,
       feedback:feedback
     }
-    this.http.post<any>('https://encodedbackend.vercel.app/auth/sendreview', reviews)
+    this.http.post<any>('https://encodedbackend.vercel.app/api/auth/sendreview', reviews)
     .subscribe(
       (response) => {
         this.happy= true
